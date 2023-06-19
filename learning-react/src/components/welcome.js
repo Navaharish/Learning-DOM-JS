@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function greeting() {
-    return <h1>Hello Navaharish</h1>
+class message extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            message: "Worm welcome to our wepage",
+        }
+    }
+
+    changeMessage() {
+        this.setState({
+            message: "Thank you for subscribing",
+
+        })
+    }
+    render() {
+        return (<div>
+            <h1>{this.state.message}</h1>,
+            <button onClick={() => { this.changeMessage() }}>subscribe</button>
+        </div >
+        )
+    }
+
+
+
 }
-
-export default greeting;
+export default message;
