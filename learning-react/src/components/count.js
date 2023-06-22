@@ -7,9 +7,9 @@ export class count extends Component {
         this.state = {
             count: 0
         }
-
     }
-    increament = () => {
+
+    increament() {
         this.setState({
 
             count: this.state.count + 2
@@ -17,9 +17,11 @@ export class count extends Component {
     }
 
     render() {
+        // properties distruction
+        const { name, heroName } = this.props
         return (
             <div>
-                <div>{this.state.count}</div>
+                <div>{this.state.count} this is the number of {name}</div>
                 <button onClick={() => this.increament()} >click to count</button>
             </div>
         )
